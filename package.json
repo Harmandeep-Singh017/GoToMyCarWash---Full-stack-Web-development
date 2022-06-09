@@ -1,0 +1,18 @@
+{
+    "name": "web-testing",
+    "version": "1.0.0",
+    "description": "Demo for node js backend",
+    "main": "app.js",
+    "scripts": {
+        "test": "start"
+    },
+    "author": "harman bhangu",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.20.0",
+        "ejs": "^3.1.8",
+        "express": "^4.18.1",
+        "mongoose": "^6.3.5",
+        "nodemon": "^2.0.16"
+    }
+}
