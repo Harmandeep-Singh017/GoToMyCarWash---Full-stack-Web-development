@@ -1,0 +1,41 @@
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../static/image/greenCar.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.box {
+    color: rgb(0, 190, 0);
+    width: 500px;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box h2 {
+    width: 90%;
+    text-align: center;
+    line-height: 35px;
+}
+
+.box a {
+    background-color: #2e5ed7;
+    text-decoration: none;
+    color: white;
+    padding-top: 13px;
+    width: 50%;
+    height: 35px;
+    text-align: center;
+    transition: all .5s ease;
+}
+
+.box a:hover {
+    position: relative;
+    left: 5px;
+}

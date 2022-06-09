@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: all .5s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Navbar top */
+
+#nav-top {
+    display: flex;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    transition: all;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
+
+#nav-top p {
+    margin: auto;
+}
+
+#nav-top:hover {
+    background-color: rgb(216, 149, 25);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+
+/* Navigation Bar */
+
+#nav-bottom {
+    display: flex;
+    height: 80px;
+    background-color: aliceblue;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    justify-content: space-evenly;
+}
+
+#nav-bottom ul {
+    display: flex;
+    margin-bottom: 0;
+}
+
+#nav-bottom li {
+    list-style: none;
+    margin: 12px;
+}
+
+.item a {
+    color: black;
+    font-size: 19px;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 9px;
+    transition: all .5s ease;
+}
+
+.item a:hover {
+    color: rgb(11, 40, 49);
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+
+/* navigatoin: Logo and social*/
+
+#nav-bottom img {
+    margin: auto 30px;
+    height: 55%;
+    width: 13%;
+}
+
+#social {
+    display: flex;
+    flex-direction: row;
+}
+
+#social a {
+    cursor: pointer;
+}
+
+#social img {
+    display: block;
+    width: 70%;
+    height: 41px;
+    margin: 9px;
+}
+
+.contact h6 {
+    font-size: 16px;
+}
+
+
+/* Home Section */
+
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 600px;
+    transition: all .5s ease;
+}
+
+#home::before {
+    content: " ";
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../static/image/car\ wash.jpeg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+#home h1 {
+    color: white;
+    font-size: 3.2rem;
+    font-family: 'Bree Serif', serif;
+    padding-bottom: 14px;
+}
+
+#home h1:hover {
+    color: rgb(102, 234, 243);
+    font-size: 3.3rem;
+    padding-bottom: 18px;
+}
+
+#home p {
+    color: white;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Services Menu */
+
+#services {
+    background-color: aliceblue;
+}
+
+#services h1 {
+    padding-top: 27px;
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+#services h1:hover {
+    font-size: 2.5rem;
+}
+
+.services-menu {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.services-menu .box {
+    border-radius: 12px;
+    width: 25%;
+    height: 45%;
+    padding: 30px;
+    margin: 27px;
+    opacity: .97;
+}
+
+.services-menu .first {
+    background-color: rgb(195 195 195);
+}
+
+.services-menu .second {
+    background-color: #0f354b;
+    color: aliceblue;
+}
+
+.services-menu .third {
+    background-color: rgb(103, 235, 235);
+}
+
+.services-menu .box:hover {
+    border-radius: 20px;
+    opacity: 1;
+}
+
+.services-menu img {
+    display: block;
+    margin: auto;
+    height: 200px;
+}
+
+.services-menu .box p {
+    text-align: center;
+    padding-top: 18px;
+    font-size: 17px;
+}
+
+#services img:hover {
+    filter: brightness(0.85);
+    border-radius: 20px;
+}
+
+
+/* About Us */
+
+#about-us {
+    background-color: aliceblue;
+    height: 70vh;
+}
+
+#about-us .head {
+    padding-top: 6px;
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+#about-us .head:hover {
+    padding: 10px;
+    font-size: 2.5rem;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 0px;
+}
+
+#our-image {
+    position: relative;
+    left: 60px;
+    margin-right: 60px;
+}
+
+#our-image img {
+    width: 500px;
+}
+
+#our-image img:hover {
+    filter: brightness(0.75);
+    border-radius: 20px;
+}
+
+#content {
+    text-align: center;
+    padding: 60px;
+}
+
+#content p {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Book Appointment Online */
+
+#book-online {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aliceblue;
+    height: 80vh;
+}
+
+.image .down-img {
+    width: 500px;
+    height: 370px;
+    overflow: auto;
+}
+
+.image .fixed-img {
+    position: relative;
+    border: 9px solid aliceblue;
+    width: 155px;
+    height: 210px;
+    left: 10%;
+}
+
+.image .top-para {
+    display: inline;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    position: absolute;
+    margin: 15px;
+    left: 39%;
+    text-align: center;
+    padding: 23px;
+    background-color: aliceblue;
+    width: 17%;
+}
+
+#book-online form {
+    text-align: center;
+    width: 35%;
+    padding: 30px;
+}
+
+#book-online h1 {
+    padding: 20px;
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+#book-online h1:hover {
+    font-size: 2.5rem;
+}
+
+#book-online form input {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 14px;
+    width: 75%;
+    margin: 6px;
+    padding: 10px;
+}
+
+#book-online form button {
+    text-align: center;
+    border: 2px solid black;
+    font-family: 'Bree Serif', serif;
+    border-radius: 12px;
+    margin: 6px;
+    padding: 10px;
+}
+
+#book-online form button:hover {
+    background-color: rgb(181, 237, 245);
+}
+
+
+/* Contact Us */
+
+#contact-us {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 400px;
+    background-color: #163649;
+}
+
+#contact-us .contact-logo img {
+    width: 285px;
+    height: 71px;
+    margin: 42px;
+    padding: 25px;
+    margin-top: 70px;
+}
+
+#contact-us .contact {
+    color: aliceblue;
+    margin: 60px;
+    padding: 20px;
+}
+
+#contact-us .contact h3 {
+    padding: 28px;
+    font-size: 18px;
+    font-family: 'Bitter', serif;
+}
+
+#contact-us .contact h5 {
+    padding: 3px;
+    padding-bottom: 23px;
+    font-size: 16px;
+    font-family: 'Bitter', serif;
+}
+
+#contact-us .contact h5 img {
+    width: 20px;
+    height: 18px;
+    padding-right: 8px;
+    margin: -1px;
+}
+
+footer {
+    background-color: black;
+    font-family: 'Bitter', serif;
+    color: aliceblue;
+    font-size: 17px;
+    height: 60px;
+    padding-left: 87px;
+    padding-top: 30px;
+}
