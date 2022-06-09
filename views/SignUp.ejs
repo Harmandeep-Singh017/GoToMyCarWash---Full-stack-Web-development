@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e446d95bc8.js" crossorigin="anonymous"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../static/index.js">
+    </script>
+    <title>Sign Up Pages</title>
+    <link rel="stylesheet" href="/static/SignUp.css">
+    <link type="image/png" sizes="16x16" rel="icon" href="../static/image/icons8-car-cleaning-16.png">
+</head>
+
+<body>
+    <div class="forms">
+        <ul class="tab-group">
+            <li class="tab active"><a href="#login">Log In</a></li>
+            <li class="tab"><a href="#signup">Sign Up</a></li>
+        </ul>
+        <form id="login" action="/login" method="post">
+            <h1>Login to Go Wash My Car</h1>
+            <div class="box"><i class="fa-solid fa-envelope"></i>
+                <input id="email" type="email" name="email" placeholder="Email">
+            </div>
+            <div class="box"><i class="fa-solid fa-key"></i>
+                <input id="password" type="password" name="password" placeholder="Password">
+            </div>
+            <a href="index.html">
+                <button class="btn" type="submit">Login</button>
+            </a>
+            <a class="option" href="#">Don't Have Account? SignUp now!</a>
+            <p>
+                <a href="#">Forgot Password?</a>
+            </p>
+        </form>
+        <form id="signup" action="/signup" method="post">
+            <h1>SignUp to Go Wash My Car</h1>
+            <div class="box"><i class="fa-solid fa-file-signature"></i>
+                <input id="firstname" type="text" name="fname" placeholder="Firstname">
+            </div>
+            <div class="box"><i class="fa-solid fa-file-signature"></i>
+                <input id="lastname" type="text" name="lname" placeholder="Lastname">
+            </div>
+            <div class="box"><i class="fa-solid fa-phone"></i>
+                <input id="phoneNumber" type="tel" name="tel" placeholder="Phone Number">
+            </div>
+            <div class="box"><i class="fa-solid fa-envelope"></i>
+                <input id="email" type="email" name="email" placeholder="Email">
+            </div>
+            <div class="box"><i class="fa-solid fa-key"></i>
+                <input id="password" type="password" name="password" placeholder="Password">
+            </div>
+            <a href="index.html">
+                <button class="btn" type="submit">Sign Up</button>
+            </a>
+            <a class="option" href="#">Already Have an Account? Login Now!</a>
+        </form>
+    </div>
+    <script src="/js/index.js"></script>
+</body>
