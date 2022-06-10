@@ -1,11 +1,11 @@
-const login = require("./database/connection"),
+const
     express = require("express"),
-    mongoose = require("mongoose"),
+    // mongoose = require("mongoose"),
     path = require("path"),
     app = express(),
     port = 8080,
-    bodyparser = require("body-parser");
-
+    bodyparser = require("body-parser"),
+    db = require("./database/connection")
 
 // Adding a middle-ware
 app.use('/static', express.static("static"))
@@ -17,44 +17,43 @@ app.use(bodyparser.json())
 
 // get and post command
 app.get('/', (req, res) => {
-    const params = {}
-    res.render('SignUp', params)
+    res.render('SignUp');
 });
 
-//Post request for login form
+app.get('/index', (req, res) => {
+    res.status(200).render('index')
+})
 
-app.post('/login', (req, res) => {
+app.get('/thank', (req, res) => {
+    res.status(200).render('thank')
+})
 
+// POST Routes
+app.post("/login", (req, res) => {
+    res.status(200).render('index')
+})
 
-    // login.findOne({
-    //     email: req.body.email
-    // }, {
-    //     password: req.body.password
-    // })
+app.post("/login", (req, res) => {
 
-    login.findOne({ email: req.body.email }, function(error, result) {
-        if (error) {
+    checkPass = (req, res) => {
+        db.login.findOne({
+            email: req.body.email,
+            password: req.body.password
+        }).exec((err, result) => {
+            if (err) {
+                res.status(404).send("User not found!")
+            }
+        })
+    }
 
-            return res.render('index')
-        }
-        res.send("User Not Found")
-    })
+})
 
+app.post('/signup', function(req, res) {
 
-    // data.save().then(() => {
-    //     res.status(200).render('index.pug')
-    // }).catch(() => {
-    //     res.status(404).send("Incorrect Email or Password")
-    // })
-});
-
-//Post request for SignUp form
-app.post('/signup', (req, res) => {
     checkDup = (req, res) => {
         // For Email
-        login.findOne({
-            email: req.body.email,
-            tel: req.body.tel
+        db.login.findOne({
+            email: req.body.email
         }).exec((err, result) => {
             if (err) {
                 res.status(500).send({ message: err });
@@ -62,15 +61,23 @@ app.post('/signup', (req, res) => {
             }
         });
     }
-
-    const data = new login(req.body);
-    data.save().then(() => {
+    const info = new db.login(req.body);
+    info.save().then(() => {
         res.status(200).render('index')
     }).catch(() => {
-        res.status(404).send("User Already Exists! ")
+        res.status(404).send("user Already exists")
+    })
+})
+
+//For booking form
+app.post('/bookAppointment', (req, res) => {
+    const book = new db.booking(req.body);
+    book.save().then(() => {
+        res.status(200).render('thank')
+    }).catch(() => {
+        res.status(404).send("Sorry! Already Booked")
     })
 });
-
 
 // listening port
 app.listen(port, () => {
